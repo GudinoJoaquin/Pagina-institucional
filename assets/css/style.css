@@ -106,8 +106,9 @@ header {
 
 
 .parallax-completo {
+    top: 60px;
     width: 100%; 
-    height: 90vh;
+    height: 550px;
     position: absolute;
     background-image: linear-gradient(0deg, rgba(159,4,4,0.33237044817927175) 0%, rgba(5,161,3,0.2819502801120448) 100%), url('/assets/img/idi2.jpeg');
     background-position: center;
@@ -120,13 +121,22 @@ header {
     
 }
 
+.parallax-chico{
+    height: 500px;
+    width: 100%;
+    background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.21752450980392157) 100%, rgba(255,255,255,0) 100%), url('/assets/img/as.webp');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
 .title-container {
     display: flex;
     flex-direction: column;
     align-items: center; /* Centrar horizontalmente los elementos */
     justify-content: center; /* Centrar verticalmente los elementos */
     position: relative;
-    top: 320px; 
+    top: 300px; 
     z-index: 3;
     background-color: transparent;
 }
@@ -155,6 +165,24 @@ header {
     background-color: rgb(255, 0, 0);
 }
 
+.us-container{
+    position: relative;
+    top:200px;
+}
+
+.business-card {
+    top: 20vw;
+    width: 50%;
+    height: auto;
+    position: relative;
+    z-index: 3;
+    background-color: #ffffff42;
+    
+    /* Centrado horizontal */
+    left: 50%;
+    transform: translateX(-50%);
+}
+ 
 
 
 @media (max-width: 768px) {
