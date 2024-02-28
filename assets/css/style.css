@@ -1,12 +1,38 @@
+/* Cambiar el tamaño del scroll */
+::-webkit-scrollbar {
+    width: 2px; /* Ancho del scroll */
+    height: 2px; /* Altura del scroll */
+}
+
+/* Cambiar el color del track (fondo del scroll) */
+::-webkit-scrollbar-track {
+    background: #f1f1f100; /* Color del track */
+}
+
+/* Cambiar el color y la forma del thumb (la parte deslizable del scroll) */
+::-webkit-scrollbar-thumb {
+    background: #1eff00; /* Color del thumb */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Cambiar el color y la forma del thumb al pasar el ratón sobre él */
+::-webkit-scrollbar-thumb:hover {
+    background: #ff0000; /* Color del thumb al pasar el ratón */
+}
+
+
 *{
-    background-color: rgb(44, 44, 44);
+    background-color: rgb(255, 255, 255);
     margin: 0;
+    padding: 0;
 }
 
 /* Estilos generales */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    width: 100%;
+     font-family: 'lato';
+    height: 1000px;
 }
 
 header {
@@ -15,16 +41,29 @@ header {
 }
 
 #browser {
+    position: fixed;
+    width: 100%;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1% 2%; /* Espaciado superior e inferior, y lateral izquierdo y derecho */
+    border-style: groove;
+    z-index: 999; /* Valor alto de z-index */
 }
 
+
 #logo {
-    width: 50px; /* Tamaño del logo */
+    width: 70px; /* Tamaño del logo */
     height: auto; /* Altura automática para mantener la proporción */
     margin-right: 20px; /* Espacio entre el logo y las opciones */
+    background-color: transparent;
+    transition: scale .3s ease;
+    cursor: pointer;
+}
+
+#logo:hover{
+    transition: scale .3s ease;
+    scale: 1.2;
 }
 
 .options {
@@ -33,19 +72,90 @@ header {
 
 .options a {
     margin-right: 20px; /* Espacio entre las opciones */
-    color: white;
+    color: rgb(255, 0, 0);
     text-decoration: none;
+    font-family: sans-serif;
+    font-size: 18px;
+    position: relative; /* Establece la posición relativa para el enlace */
+    overflow: hidden; /* Oculta el subrayado que se extenderá más allá del enlace */
 }
 
-.options a:hover {
-    text-decoration: underline; /* Subrayado al pasar el ratón */
+.options a::before {
+    content: ""; /* Agrega un contenido vacío al pseudo-elemento */
+    position: absolute;
+    bottom: 0; /* Coloca el pseudo-elemento en la parte inferior del enlace */
+    left: 0; /* Comienza desde el borde izquierdo del enlace */
+    width: 0; /* Inicialmente, el ancho es 0 para que no sea visible */
+    height: 2px; /* Altura del subrayado */
+    background-color: rgb(255, 0, 0); /* Color del subrayado */
+    transition: width 0.3s ease-in-out; /* Transición para animar el ancho */
 }
 
-#imagen-de-inicio{
+.options a:hover::before {
+    width: 100%; /* Aumenta el ancho del subrayado al pasar el mouse */
+}
+
+
+.start-conteiner {
+    display: flex; /* Utilizar flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    width: 100%; /* Ancho completo */
+    height: 100vh; /* Altura igual al 100% de la ventana */
+}
+
+
+.parallax-completo {
+    width: 100%; 
+    height: 90vh;
+    position: absolute;
+    background-image: linear-gradient(0deg, rgba(159,4,4,0.33237044817927175) 0%, rgba(5,161,3,0.2819502801120448) 100%), url('/assets/img/idi2.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente los elementos */
+    justify-content: center; /* Centrar verticalmente los elementos */
+    position: relative;
+    top: 320px; 
+    z-index: 3;
+    background-color: transparent;
+}
+
+#title, #subtitle {
+    font-family: fantasy;
+    font-size: 100px;
+    background-color: transparent;
+    text-align: center; /* Alinear texto al centro */
+    color: black; /* Color del texto */
+    text-shadow: 
+        -4px -4px 0 white, /* Sombra superior izquierda */
+        4px -4px 0 white, /* Sombra superior derecha */
+        -4px 4px 0 white, /* Sombra inferior izquierda */
+        4px 4px 0 white; /* Sombra inferior derecha */
+}
+
+#subtitle{
+    font-size: 60px;
+
+}
+
+.title-container hr{
+    height: 3px;
     width: 100%;
-    height: 450px;
-    background-image: cover;
+    background-color: rgb(255, 0, 0);
 }
+
+
 
 @media (max-width: 768px) {
     /* Estilos para pantallas más pequeñas */
@@ -62,4 +172,5 @@ header {
     }
 
 }
+
 
