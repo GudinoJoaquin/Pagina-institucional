@@ -33,8 +33,9 @@ body {
     flex-direction: column;
     margin: 0;
     width: 100%;
-     font-family: 'lato';
+    font-family: 'system-ui';
     height: 1000px;
+    color: black;
 }
 
 header {
@@ -157,14 +158,14 @@ header {
 }
 
 #subtitle{
-    font-size: 60px;
-
+    font-size: 3rem;
+    font-family: 'system-ui';
 }
 
 .title-container hr{
     height: 3px;
     width: 100%;
-    background-color: rgb(255, 0, 0);
+    background-color: #ed5251;
 }
 
 
@@ -177,8 +178,62 @@ header {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-
 }
+<<<<<<< HEAD
+=======
+.presentation{
+    margin: -40px 60px 100px 60px;
+    display: flex;
+    /* border: 2px solid red; */
+    gap: 80px;
+}
+#presentation-img img{
+    width: 900px;
+    border-radius: 20px;
+    flex: 2;
+}
+#presentation-text p{
+    flex: 2;
+    padding: 10px;
+    font-size: 1.3rem;
+}
+
+#presentation-text h2{
+    font-size: 3.2rem;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #ed5251;
+}
+
+#btn-especialidades{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+.btn-especialidad{
+    border: 1px solid #ed5251;
+    border-radius: 3px;
+    color: #ed5251;
+    padding: 20px;
+    transition: all .2s ease;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.btn-especialidad:hover{
+    scale: 1.2;
+    transition: all .2s ease;
+    border: 1px solid #ed5251;
+    background-color: #ed5251;
+    color: white;
+    font-weight: 400;
+}
+
+.objective{
+    margin-bottom: 100px;
+    margin-left: 50vw;
+>>>>>>> 3dff1941ed2166100d55516bd260c715160fd65e
 
 .presentation {
     display: flex;
@@ -304,7 +359,6 @@ p {
 
 .google-maps {
     margin-top: 20px;
-    border: 1px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -313,8 +367,15 @@ p {
     width: 60%;
     height: 300px;
 }
+<<<<<<< HEAD
 
 
+=======
+  
+footer{
+    background: #000;
+}
+>>>>>>> 3dff1941ed2166100d55516bd260c715160fd65e
 
 
 @media (max-width: 768px) {
@@ -344,6 +405,16 @@ p {
         display: none;
     }
 
+}
+
+@media (max-height: 1080px) and (max-width: 1920px){
+    .title-container {
+        top: 360px;
+    }
+    .parallax-completo {
+        height: 750px;
+        
+    }
 }
 
 
