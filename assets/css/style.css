@@ -100,18 +100,15 @@ header {
 
 
 .start-conteiner {
+    height: 450px;
     display: flex; /* Utilizar flexbox */
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
     width: 100%; /* Ancho completo */
-    height: 100vh; /* Altura igual al 100% de la ventana */
 }
 
-
 .parallax-completo {
-    top: 60px;
     width: 100%; 
-    height: 550px;
     position: absolute;
     background-image: linear-gradient(0deg, rgba(159,4,4,0.33237044817927175) 0%, rgba(5,161,3,0.2819502801120448) 100%), url('/assets/img/idi2.jpeg');
     background-position: center;
@@ -134,12 +131,12 @@ header {
 }
 
 .title-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center; /* Centrar horizontalmente los elementos */
     justify-content: center; /* Centrar verticalmente los elementos */
     position: relative;
-    top: 300px; 
     z-index: 3;
     background-color: transparent;
 }
@@ -171,69 +168,13 @@ header {
 
 .us-container {
     position: relative;
-    top:100px;
+    top:350px;
     max-width: 100%;
-    margin: 20px auto;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
-<<<<<<< HEAD
-=======
-.presentation{
-    margin: -40px 60px 100px 60px;
-    display: flex;
-    /* border: 2px solid red; */
-    gap: 80px;
-}
-#presentation-img img{
-    width: 900px;
-    border-radius: 20px;
-    flex: 2;
-}
-#presentation-text p{
-    flex: 2;
-    padding: 10px;
-    font-size: 1.3rem;
-}
-
-#presentation-text h2{
-    font-size: 3.2rem;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    color: #ed5251;
-}
-
-#btn-especialidades{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 40px;
-}
-.btn-especialidad{
-    border: 1px solid #ed5251;
-    border-radius: 3px;
-    color: #ed5251;
-    padding: 20px;
-    transition: all .2s ease;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-.btn-especialidad:hover{
-    scale: 1.2;
-    transition: all .2s ease;
-    border: 1px solid #ed5251;
-    background-color: #ed5251;
-    color: white;
-    font-weight: 400;
-}
-
-.objective{
-    margin-bottom: 100px;
-    margin-left: 50vw;
->>>>>>> 3dff1941ed2166100d55516bd260c715160fd65e
 
 .presentation {
     display: flex;
@@ -367,15 +308,8 @@ p {
     width: 60%;
     height: 300px;
 }
-<<<<<<< HEAD
 
 
-=======
-  
-footer{
-    background: #000;
-}
->>>>>>> 3dff1941ed2166100d55516bd260c715160fd65e
 
 
 @media (max-width: 768px) {
