@@ -69,6 +69,76 @@
                 </div>
             </div>
             
+            <section id="cont">
+                <style>
+            
+                    .imagen {
+                        width: 100%;
+                        max-height: 326px; /* Ajusta la altura máxima según tus preferencias */
+                        margin: -2px;
+                        object-fit: cover;
+                        filter: brightness(.5);
+                        transition: max-height 0.3s ease; /* Transición para suavizar el efecto */
+                    }
+            
+                    .img-container {
+                        position: relative;
+                        overflow: hidden; /* Para evitar que el texto se desborde */
+                    }
+            
+                    .texto-superpuesto {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 3.7rem; /* Ajusta el tamaño del texto según tus preferencias */
+                        font-family: 'system UI', Tahoma, Geneva, Verdana, sans-serif; /* Cambia la fuente del texto */
+                        text-align: center;
+                        transition: top 0.3s ease; /* Transición para suavizar el movimiento del texto */
+                    }
+            
+                    .descripcion{
+                        position: absolute;
+                        top: 80%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: white;
+                        font-size: 2.7rem; /* Ajusta el tamaño del texto según tus preferencias */
+                        font-family: 'system UI', Tahoma, Geneva, Verdana, sans-serif; /* Cambia la fuente del texto */
+                        text-align: center;
+                        transition: top 0.3s ease; /* Transición para suavizar el movimiento del texto */
+                        display: none;
+                    }
+            
+                    .img-container:hover .imagen {
+                        max-height: 400px; /* Cambia la altura máxima al hacer hover */
+                    }
+            
+                    .img-container:hover .texto-superpuesto {
+                        top: 10%; /* Mueve el texto hacia arriba al hacer hover */
+                    }
+            
+                    .img-container:hover .descripcion{
+                        display: block;
+                    }
+                    #cont{
+                        margin : 15px;
+                    }
+                </style>
+                <div class="img-container">
+                    <img class="imagen" src="../assets/img/softwares-de-programacion.jpg" alt="">
+                    <div class="texto-superpuesto">Informática</div>
+                    <div class="descripcion">adfadfhjdafjadjfhadjhf</div>
+                </div>
+                <div class="img-container">
+                    <img class="imagen" src="../assets/img/Electronica.jpeg" alt="">
+                    <div class="texto-superpuesto">Electrónica</div>
+                </div>
+                <div class="img-container">
+                    <img class="imagen" src="../assets/img/Construcciones.jpg" alt="">
+                    <div class="texto-superpuesto">Construcciones</div>
+                </div>
+            </section>
             
             <div class="location">
                 <p>Dirección: Av. Juan B. Justo 4287, B7600 Mar del Plata, Provincia de Buenos Aires</p>
