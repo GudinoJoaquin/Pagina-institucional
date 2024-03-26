@@ -286,8 +286,8 @@ header {
 
 
 .location {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 300px;
+    margin-bottom: 300px;
 }
 
 p {
@@ -309,8 +309,118 @@ p {
     height: 300px;
 }
 
+.imagen {
+    width: 100%;
+    max-height: 150px;
+    margin: -2px;
+    filter: brightness(0.5);
+    object-fit: cover;
+    background-image: linear-gradient(0deg, rgba(159,4,4,0.33), rgba(5,161,3,0.28));
+    transition: max-height 0.6s ease, filter 0.6s ease;
+}
+
+.img-container {
+    top: 100px;
+    position: relative;
+    overflow: hidden;
+    transition: height 0.6s ease; /* Se añade la transición para el cambio de altura */
+}
+
+.texto-superpuesto, .descripcion {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    text-align: center;
+    transition: opacity 0.6s ease, transform 0.6s ease, top 0.6s ease; /* Se añade la transición para el cambio de posición del texto */
+}
 
 
+.texto-superpuesto {
+    font-family: fantasy;
+    font-size: 45px;
+    color: black;
+    text-shadow: -4px -4px 0 white, 4px -4px 0 white, -4px 4px 0 white, 4px 4px 0 white;
+    opacity: 1;
+    top: 50%;
+}
+
+.descripcion {
+    margin-top: 50px;
+    display: none; /* Oculta la descripción por defecto */
+    opacity: 0; /* Inicialmente transparente */
+    display: flex;
+    flex-direction: column; /* Colocar elementos en columna */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+.descripcion a {
+    margin-top: 10%;
+    background-color: transparent;
+    font-size: 20px;
+    font-family: 'system UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    margin-bottom: 20px; /* Separación entre el texto y el botón */
+}
+
+.img-container:hover .imagen {
+    max-height: 450px;
+    filter: brightness(0.2);
+}
+
+.img-container:hover .texto-superpuesto {
+    top: 30%;
+    opacity: 0.5;
+}
+
+.img-container:hover .descripcion {
+    opacity: 1;
+}
+#cont {
+    margin: 15px;
+}
+
+#b-d {
+    color: white;
+    border: none; /* Elimina los bordes iniciales */
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    padding: 10px 20px; /* Ajusta el tamaño del botón */
+    margin-top: 5%; /* Mueve el botón 50px hacia abajo */
+}
+
+#b-d::before,
+#b-d::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px; /* Grosor de los bordes */
+    transition: width 0.3s ease;
+}
+
+#b-d::before {
+    top: 0;
+    left: 0;
+    background-color: red; /* Cambia el color de la línea superior a rojo */
+}
+
+#b-d::after {
+    bottom: 0;
+    right: 0;
+    background-color: green; /* Cambia el color de la línea inferior a verde */
+}
+
+#b-d:hover::before {
+    width: 100%; /* Ancho completo al activar el hover */
+}
+
+#b-d:hover::after {
+    width: 100%; /* Ancho completo al activar el hover */
+}
 
 @media (max-width: 768px) {
     /* Estilos para pantallas más pequeñas */
@@ -350,5 +460,3 @@ p {
         
     }
 }
-
-

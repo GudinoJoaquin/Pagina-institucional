@@ -43,9 +43,9 @@
                     <img src="../assets/img/idi2.jpeg" alt="">
                 </div>
                 <div class="buttons-presentation">
-                    <div class="button-presentation">INFORMATICA</div>
-                    <div class="button-presentation">ELECTRONICA</div>
-                    <div class="button-presentation">CONSTRUCCIONES</div>
+                    <div class="button-presentation electronica">INFORMATICA</div>
+                    <div class="button-presentation electronica">ELECTRONICA</div>
+                    <div class="button-presentation electronica">CONSTRUCCIONES</div>
                 </div>
             </div>          
             
@@ -70,91 +70,32 @@
             </div>
             
             <section id="cont">
-                <style>
-            
-                    .imagen {
-                        width: 100%;
-                        max-height: 326px; /* Ajusta la altura máxima según tus preferencias */
-                        margin: -2px;
-                        filter: brightness(.5);
-                        object-fit: cover;
-                        background-image: linear-gradient(0deg, rgba(159,4,4,0.33237044817927175) 0%, rgba(5,161,3,0.2819502801120448) 100%);
-                        transition: max-height 0.3s ease; /* Transición para suavizar el efecto */
-                    }
-            
-                    .img-container {
-                        position: relative;
-                        overflow: hidden; /* Para evitar que el texto se desborde */
-                    }
-            
-                    .texto-superpuesto {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        background: transparent;
-                        transform: translate(-50%, -50%);
-                        font-family: fantasy;
-                        font-size: 4.5rem;
-                        letter-spacing: 5px;
-                        background-color: transparent;
-                        text-align: center; /* Alinear texto al centro */
-                        color: black; /* Color del texto */
-                        text-shadow: 
-                            -4px -4px 0 white, /* Sombra superior izquierda */
-                            4px -4px 0 white, /* Sombra superior derecha */
-                            -4px 4px 0 white, /* Sombra inferior izquierda */
-                            4px 4px 0 white; /* Sombra inferior derecha */
-                        text-align: center;
-                        transition: top 0.3s ease; /* Transición para suavizar el movimiento del texto */
-                    }
-            
-                    .descripcion{
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        background: transparent;
-                        font-size: 2.7rem; /* Ajusta el tamaño del texto según tus preferencias */
-                        font-family: 'system UI', Tahoma, Geneva, Verdana, sans-serif; /* Cambia la fuente del texto */
-                        text-align: center;
-                        transition: all 0.3s ease; /* Transición para suavizar el movimiento del texto */
-                        display: none;
-                        color: white;
-                    }
-            
-                    .img-container:hover .imagen {
-                        max-height: 700px; /* Cambia la altura máxima al hacer hover */
-                        filter: brightness(.2);
-                        transition: all .8s ease
-                    }
-            
-                    .img-container:hover .texto-superpuesto {
-                        top: 10%; /* Mueve el texto hacia arriba al hacer hover */
-                        transition: top 0.3s ease;
-                    }
-            
-                    .img-container:hover .descripcion{
-                        display: block;
-                        transition: all 0.3s ease;
-                    }
-                    #cont{
-                        margin : 15px;
-                    }
-                </style>
-                <div class="img-container">
+                <div class="img-container" id="informatica">
                     <img class="imagen" src="../assets/img/softwares-de-programacion.jpg" alt="">
                     <div class="texto-superpuesto">Informática</div>
-                    <div class="descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem quisquam tempore ipsa dolores culpa vero autem veniam sunt, tempora ea quae animi, quia ullam praesentium sequi magnam eos! Voluptas, beatae!</div>
+                    <div class="descripcion">
+                        <a>La especialización en informática brinda a los estudiantes habilidades en desarrollo de software, análisis de datos y seguridad cibernética, para diseñar, implementar y mantener sistemas informáticos eficientes y seguros, tanto en el sector privado como en instituciones gubernamentales, abordando desafíos tecnológicos contemporáneos.</a>
+                        <button id="b-d">Saber más</button>
+                    </div>
                 </div>
-                <div class="img-container">
+                <div class="img-container" id="electronica">
                     <img class="imagen" src="../assets/img/Electronica.jpeg" alt="">
                     <div class="texto-superpuesto">Electrónica</div>
+                    <div class="descripcion">
+                        <a>En electrónica, los alumnos adquieren conocimientos especializados en diseño de circuitos analógicos y digitales, sistemas de comunicación inalámbrica, y dispositivos electrónicos avanzados, preparándolos para carreras en industrias cruciales como la automotriz, aeroespacial y de dispositivos médicos, donde la innovación tecnológica es imperativa para el progreso.</a>
+                        <button id="b-d">Saber más</button>
+                    </div>
                 </div>
-                <div class="img-container">
+                <div class="img-container" id="construcciones">
                     <img class="imagen" src="../assets/img/Construcciones.jpg" alt="">
                     <div class="texto-superpuesto">Construcciones</div>
+                    <div class="descripcion">
+                        <a>La especialización en construcciones instruye en técnicas avanzadas de diseño arquitectónico, gestión de proyectos y aplicación de tecnologías de construcción sostenible, capacitando a los estudiantes para liderar proyectos de infraestructura urbana, edificaciones modernas y espacios públicos que promuevan el desarrollo sostenible y mejoren la calidad de vida de las comunidades locales y globales.</a>
+                        <button id="b-d">Saber más</button>
+                    </div>
                 </div>
             </section>
+            
             
             <div class="location">
                 <p>Dirección: Av. Juan B. Justo 4287, B7600 Mar del Plata, Provincia de Buenos Aires</p>
